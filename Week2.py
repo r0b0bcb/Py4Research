@@ -6,7 +6,8 @@
 # write your code here!
 import numpy
 
-# Exersize 1: empty 3x3 board function called create_board
+###############################################
+# Exercise 1: empty 3x3 board function called create_board
 
 def create_board():
     array = numpy.zeros((3,3), dtype=int)
@@ -14,7 +15,8 @@ def create_board():
     
 board = create_board()
 
-# Exersize 2: change (0,0) to player 1 with function place
+###############################################
+# Exercise 2: change (0,0) to player 1 with function place
 
 def place(board, player, position):
     if player == 1:
@@ -29,7 +31,8 @@ print(board) #show blank starting board
 place(board, 1, (0,0))
 print(board) #show move placed
 
-# Exersize 3: function to show availible placement optiions after a move
+###############################################
+# Exercise 3: function to show availible placement optiions after a move
 
 def possibilities(board):
     xy = numpy.where(board == 0)
@@ -40,3 +43,25 @@ def possibilities(board):
     
 possibilities(board)
 
+###############################################
+# Exercise 4: function to place random move for player 2
+
+def random_place(board, player):
+    selection = possibilities(board)
+    board[random.choice(selection)] = player
+
+random_place(board, 2)
+print(board)
+
+###############################################
+# Exercise 5: 3 random move game per player
+
+board = create_board()
+for loop in range(3):
+    random_place(board, 1)
+    random_place(board, 2)
+
+print(board)
+
+###############################################
+# Exercise 6:
