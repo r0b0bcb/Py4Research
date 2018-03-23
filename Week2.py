@@ -64,4 +64,17 @@ for loop in range(3):
 print(board)
 
 ###############################################
-# Exercise 6:
+# Exercise 6: check row for win
+
+def row_win(board, player):
+    return (board==[1,1,1]).all(axis=1)
+
+row_win(board, 1)
+
+###############################################
+# Exercise 7: check col for win
+
+def col_win(board, player):
+    return (board==[1,1,1]).all(axis=0)
+
+col_win(board, 1)
