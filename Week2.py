@@ -5,6 +5,7 @@
 ###############################################
 # write your code here!
 import numpy
+import time
 
 ###############################################
 # Exercise 1: empty 3x3 board function called create_board
@@ -132,8 +133,6 @@ play_game()
 ###############################################
 # Exercise 11: analize the game and bots, print timer and show graph
 
-import time
-
 array = []
 start = time.time()
 for loop in range(100):
@@ -148,7 +147,6 @@ plt.show()
 ###############################################
 # Exercise 12: eval strategic game
 
-import time
 array = []
 start = time.time()
 for loop in range(1000):
