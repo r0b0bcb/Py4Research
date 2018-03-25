@@ -67,7 +67,7 @@ print(board)
 # Exercise 6: check row for win
 
 def row_win(board, player):
-    return (board==[1,1,1]).all(axis=1)
+    return (board==[player]).all(axis=1)
 
 row_win(board, 1)
 
@@ -75,6 +75,115 @@ row_win(board, 1)
 # Exercise 7: check col for win
 
 def col_win(board, player):
-    return (board==[1,1,1]).all(axis=0)
+    return (board==[player]).all(axis=0)
 
 col_win(board, 1)
+
+###############################################
+# Exercise 8: check diagonal wins
+
+def diag_win(board, player):
+    array = board[np.diag_indices(3)]#, np.diag(np.fliplr(board))
+    if (board[np.diag_indices(3)] == [player]).all() is True or (np.diag(np.fliplr(board)) == [player]).all() is True:
+        return True
+    else:
+        return False
+    
+diag_win(board, 1)
+
+###############################################
+# Exercise 9: check for winner
+
+def evaluate(board):
+    winner = 0
+    for player in [1, 2]:
+        if row_win(board, player) == True or col_win(board, player) == True or diag_win(board, player) == True:
+            winner = player
+            return winner
+    if np.all(board != 0) and winner == 0:
+        winner = -1
+    return winner
+
+evaluate(board)
+
+###############################################
+# Exercise 10: two robots walk into a game
+
+def play_game():
+    board = create_board()
+    print(board)
+    for loop in range (board.size-1):
+      for player in [1,2]:
+        random_place(board, player)
+        if evaluate(board) != 0:
+            break
+      if evaluate(board) == 1:
+            print("Player 1 wins")
+            break
+      elif evaluate(board) == 2:
+            print("Player 2 wins")
+            break
+    if evaluate(board) == -1:
+        print("Draw")
+    print(board)
+    
+play_game()
+
+###############################################
+# Exercise 11: analize the game and bots, print timer and show graph
+
+import time
+
+array = []
+start = time.time()
+for loop in range(100):
+    array.append(play_game())
+stop = time.time()
+timer = stop - start
+print(timer)
+
+plt.hist(array, bins=[-1,0,1,2,3])
+plt.show()
+
+###############################################
+# Exercise 12: eval strategic game
+
+import time
+array = []
+start = time.time()
+for loop in range(1000):
+    array.append(play_strategic_game())
+stop = time.time()
+timer = stop - start
+print(timer)
+
+plt.hist(array, bins=[-1,0,1,2,3])
+plt.show()
+
+###############################################
+# Exercise 12: player 1 always starts in the middle, two bots play
+
+def play_strategic_game():
+    board, winner = create_board(), 0
+    board[1,1] = 1
+    while winner == 0:
+        for player in [2,1]:
+            # use `random_place` to play a game, and store as `board`.
+            # use `evaluate(board)`, and store as `winner`.
+            random_place(board, player)
+            if evaluate(board) != 0:
+                break
+        if evaluate(board) == 1:
+            print("Player 1 wins")
+            winner = 1
+            break
+        elif evaluate(board) == 2:
+            print("Player 2 wins")
+            winner = 2
+            break
+        if evaluate(board) == -1:
+            print("Draw")
+            winner = -1
+    return winner
+
+play_strategic_game()
