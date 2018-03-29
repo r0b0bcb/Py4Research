@@ -9,6 +9,8 @@ Python basics; Skipped in this record, but easy enough even if you've just learn
 Libraries and python research concepts; This is where I will start to save some of my homework assignments.
 >"Exercises for Homework (Week 2). Tic-tac-toe (or noughts and crosses) is a simple strategy game in which two players take turns placing a mark on a 3x3 board, attempting to make a row, column, or diagonal of three with their mark. In this homework, we will use the tools we've covered in the past two weeks to create a tic-tac-toe simulator and evaluate basic winning strategies."
 
-## [Week 3](./Week3.py)
-Woo cyrptography, startign with the basics. Et tu Brute?
+## Week 3
+### [Case Study 1](./case_study_1.py)
+Woo cyrptography, starting with the basics. Et tu Brute?
 >"Over the next five exercises, we will create our own Caesar cipher, as well as a message decoder for this cipher. In this exercise, we will define the alphabet used in the cipher."
+### [Case Study 2](./case_study_2.py)
