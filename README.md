@@ -10,7 +10,7 @@ Libraries and python research concepts; This is where I will start to save some 
 >"Exercises for Homework (Week 2). Tic-tac-toe (or noughts and crosses) is a simple strategy game in which two players take turns placing a mark on a 3x3 board, attempting to make a row, column, or diagonal of three with their mark. In this homework, we will use the tools we've covered in the past two weeks to create a tic-tac-toe simulator and evaluate basic winning strategies."
 
 ## Week 3
-### [DNA Translation](./dna_translation.py.py)
+### [DNA Translation](./dna_translation.py)
 Code created following course notes. It takes a txt file containing a dna sequence from the NCBI and uses a table to translate it to proteins. Then it takes the NCBI protein txt and compares it to your result. Prints the translated protein if its correct.
 ### [Case Study 1](./case_study_1.py)
 Woo cyrptography, starting with the basics. Et tu Brute?
