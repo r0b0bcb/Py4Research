@@ -59,7 +59,7 @@ def word_stats(word_counts):
 	counts = word_counts.values()
 	return (num_unique, counts)
 
-book_dir = "/Users/Clay/PythonEnv/language_processing/Books"
+book_dir = "./Books" #Change to whever ever the folder is stored
 
 stats = pd.DataFrame(columns = ("language", "author", "title", "length", "unique"))
 title_num = 1
