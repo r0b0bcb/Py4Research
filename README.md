@@ -18,5 +18,6 @@ Woo cyrptography, starting with the basics. Et tu Brute?
 ### [Language Processing](./lang_proc_plot.py)
 Code created following course notes. Takes given books file from the Gutenberg Project in 4 languages and reads them all. Counts unique words and amount of words. Then plots them respective to language using matplotlib.pyplot
 ### [Case Study 2](./case_study_2.py) Translations of Hamlet
-Use knowledge from previous exersizes to analyze one specific literary work in multiple translations.
+Use knowledge from previous exersizes to analyze one specific literary work in multiple translations and plot data.
 >"In this case study, we will find and visualize summary statistics of the text of different translations of Hamlet"
+[Data plot](./case_study_2_plot_hamlets.svg)
