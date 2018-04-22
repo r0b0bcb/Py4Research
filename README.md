@@ -12,12 +12,12 @@ Libraries and python research concepts; This is where I will start to save some 
 ## Week 3
 ### [DNA Translation](./dna_translation.py)
 Code created following course notes. It takes a txt file containing a dna sequence from the NCBI and uses a table to translate it to proteins. Then it takes the NCBI protein txt and compares it to your result. Prints the translated protein if its correct.
-### [Case Study 1](./case_study_1.py) 
+### [Case Study 1](./case_study_1.py) : Caesar Cipher
 Woo cyrptography, starting with the basics. Et tu Brute?
 >"Over the next five exercises, we will create our own Caesar cipher, as well as a message decoder for this cipher. In this exercise, we will define the alphabet used in the cipher."
 ### [Language Processing](./lang_proc_plot.py)
 Code created following course notes. Takes given books file from the Gutenberg Project in 4 languages and reads them all. Counts unique words and amount of words. Then plots them respective to language using matplotlib.pyplot
-### [Case Study 2](./case_study_2.py) Translations of Hamlet
+### [Case Study 2](./case_study_2.py) : Translations of Hamlet
 Use knowledge from previous exersizes to analyze one specific literary work in multiple translations and plot data.
 >"In this case study, we will find and visualize summary statistics of the text of different translations of Hamlet"
 
