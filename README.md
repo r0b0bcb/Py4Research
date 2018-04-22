@@ -20,4 +20,5 @@ Code created following course notes. Takes given books file from the Gutenberg P
 ### [Case Study 2](./case_study_2.py) Translations of Hamlet
 Use knowledge from previous exersizes to analyze one specific literary work in multiple translations and plot data.
 >"In this case study, we will find and visualize summary statistics of the text of different translations of Hamlet"
+
 [Data plot](./case_study_2_plot_hamlets.svg)
